@@ -18,7 +18,7 @@ class List extends Component {
                             return (
                                 <tr key={ index } >
                                     <td style={{ width: 250, textAlign: 'left'  }} >{ user.interviewRef } </td>
-                                    <td style={{ textAlign: 'left' }}> {user.firstName} {user.lastName} </td>
+                                    <td style={{ textAlign: 'left' }}> {`${user.firstName} ${user.lastName}`} </td>
                                     <td style={{ width: 240, textAlign: 'left'}} >WEB { user.major.toUpperCase() }</td>
                                 </tr>
                             );
