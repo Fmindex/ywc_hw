@@ -3,18 +3,19 @@
 }
 
 .App-logo {
-  margin-top: 50px;
+  margin-top: 60px;
   height: 100px;
 }
 
 .App-header {
   background-image: url('./image/background.jpg');
-  height: 250px;
+  height: 300px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
+  margin-top: 32px;
   font-size: 1.5em;
 }
 
@@ -28,6 +29,7 @@
 
 .mk-inline {
   display: inline-block;
-  width: 40%;
+  width: 25%;
+  outline: none;
   /* margin: 16px; */
 }
