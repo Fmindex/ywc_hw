@@ -17,9 +17,10 @@ class App extends Component {
       users: [],
       keyWordTerm: '',
       isActive: {
-        content: false,
-        design: false,
-        programming: false,
+        content: true,
+        design: true,
+        marketing: true,
+        programming: true,
       },
       selectedOption: {value: 'interviewRef', label: 'Sort By ID'},
     }
@@ -62,7 +63,7 @@ class App extends Component {
 
   tagFilter(Users) {
     let Result = Users.filter((user) => (
-      (!this.state.isActive["content"] && !this.state.isActive["design"] && !this.state.isActive["programming"] && !this.state.isActive["marketing"]) ||
+      // (!this.state.isActive["content"] && !this.state.isActive["design"] && !this.state.isActive["programming"] && !this.state.isActive["marketing"]) ||
       this.state.isActive[user.major]
     ));
     return Result;
@@ -103,13 +104,28 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={require('./image/logo.png')} className="App-logo" alt="logo" />
-          <h1 className="App-title">ประกาศรายชื่อผู้มีสิทธิ์สอบสัมภาษณ์</h1>
+          <h1 className="App-title">ประกาศรายชื่อผู้มีสิทธิ์เข้าสัมภาษณ์</h1>
         </header>
         <div className="main-container">
-          <div style={{ width: '80%', left: 0, right: 0, margin: 'auto', padding: 32 }}>
-            <div style={{ verticalAlign: 'middle' }}>
+          <div style={{ 
+            width: '80%', 
+            left: 0, 
+            right: 0, 
+            marginRight: 'auto', 
+            marginLeft: 'auto', 
+            marginTop: 32, 
+            marginBottom: 32, 
+            padding: 32, 
+            backgroundColor: 'rgba(0, 0, 0, 0.1)', 
+            // borderRadius: 16,
+            padding: 32, 
+          }}>
+            <div style={{ 
+                verticalAlign: 'middle', 
+                display: 'flex', 
+            }}>
               <SearchBox 
-                style={{ width: '50%', display: 'inline-block' }} 
+                style={{ width: '60%', display: 'inline-block', marginRight: 32, marginLeft: 48 }} 
                 value={this.state.keyWordTerm} 
                 onKeyPressed={this.onKeyPressed} 
               />
